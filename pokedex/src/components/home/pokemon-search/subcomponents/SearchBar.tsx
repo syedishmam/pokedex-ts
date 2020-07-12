@@ -1,16 +1,16 @@
 import React from 'react';
 
 interface SearchBarProps {
-    fetchPokemon: (searchQuery: string, store: (dataSet: Object[]) => void) => Promise<Object[]>,
     updateSearchQuery: (event: any) => void,
-    searchQuery: string
+    searchQuery: string,
+    ifEnterPress: (e: React.KeyboardEvent) => void
 }
 
 class SearchBar extends React.Component<SearchBarProps> {
     render() {
         return (
             <div>
-                <input type="text" onChange={this.props.updateSearchQuery} />
+                <input type="text" onChange={this.props.updateSearchQuery} onKeyPress={this.props.ifEnterPress}/>
                 <button>Search</button>
             </div>
         )
