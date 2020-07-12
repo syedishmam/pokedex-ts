@@ -2,6 +2,7 @@ import React from 'react';
 
 import SearchBar from './subcomponents/SearchBar';
 import {fetchPokemon} from '../../../api/pokeApiFunctions';
+import {storePokemonDataSet} from '../../../redux/actions/storePokemonDataSet';
 
 class PokemonSearch extends React.Component {
 
@@ -16,7 +17,7 @@ class PokemonSearch extends React.Component {
 
     ifEnterPress = (e: React.KeyboardEvent): void => {
         if(e.key === 'Enter') {
-            console.log('fetch');
+            fetchPokemon(this.state.searchQuery, storePokemonDataSet);
         }
     }
 
