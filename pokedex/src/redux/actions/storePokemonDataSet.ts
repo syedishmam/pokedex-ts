@@ -4,5 +4,3 @@ export const storePokemonDataSet = (dataSet: Object[]): Object => {
         payload: dataSet
     }
 }
-
-//Must be refactored for typescript
