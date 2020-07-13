@@ -1,10 +1,15 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import SearchBar from './subcomponents/SearchBar';
 import {fetchPokemon} from '../../../api/pokeApiFunctions';
 import {storePokemonDataSet} from '../../../redux/actions/storePokemonDataSet';
 
-class PokemonSearch extends React.Component {
+interface PokemonSearchProps {
+    storePokemonDataSet: any
+}
+
+class PokemonSearch extends React.Component<PokemonSearchProps> {
 
     state = {
         searchQuery: ''
@@ -15,9 +20,10 @@ class PokemonSearch extends React.Component {
         console.log(e.currentTarget.value);
     }
 
-    ifEnterPress = (e: React.KeyboardEvent): void => {
+    ifEnterPress = async (e: React.KeyboardEvent) => {
         if(e.key === 'Enter') {
-            fetchPokemon(this.state.searchQuery, storePokemonDataSet);
+            const data = await fetchPokemon(this.state.searchQuery, this.props.storePokemonDataSet);
+            console.log(data);
         }
     }
 
@@ -31,4 +37,4 @@ class PokemonSearch extends React.Component {
     }
 }
 
-export default PokemonSearch;
+export default connect(null, {storePokemonDataSet})(PokemonSearch);
