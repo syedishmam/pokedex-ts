@@ -5,6 +5,8 @@ import SearchBar from './subcomponents/SearchBar';
 import {fetchPokemon} from '../../../api/pokeApiFunctions';
 import {storePokemonDataSet} from '../../../redux/actions/storePokemonDataSet';
 
+import './pokemonSearch.css';
+
 interface PokemonSearchProps {
     storePokemonDataSet: any
 }
@@ -29,7 +31,7 @@ class PokemonSearch extends React.Component<PokemonSearchProps> {
 
     render() {
         return (
-            <div>
+            <div id="pokemonSearchContainer">
                 <h3>Search any Pokemon on our database!</h3>
                 <SearchBar updateSearchQuery={this.updateSearchQuery} searchQuery={this.state.searchQuery} ifEnterPress={this.ifEnterPress}/>
             </div>
