@@ -1,0 +1,7 @@
+#searchBarContainer {
+    border: dashed 1px white;
+}
+
+#searchTextField {
+    border-radius: 5px;
+}

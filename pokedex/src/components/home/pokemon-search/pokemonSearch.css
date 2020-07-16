@@ -1,8 +1,12 @@
 #pokemonSearchContainer {
-    width: 100vw;
     height: 300px;
+    padding: 10px;
     border: solid black 1px;
     border-radius: 0 0 25px 25px;
     color: white;
     background-color: #ff0000;
+}
+
+#searchHeader {
+    margin-top: 200px;
 }

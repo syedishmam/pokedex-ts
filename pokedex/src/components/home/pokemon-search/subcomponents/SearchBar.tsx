@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles/SearchBar.css';
+
 interface SearchBarProps {
     updateSearchQuery: (event: any) => void,
     searchQuery: string,
@@ -9,8 +11,8 @@ interface SearchBarProps {
 class SearchBar extends React.Component<SearchBarProps> {
     render() {
         return (
-            <div>
-                <input type="text" onChange={this.props.updateSearchQuery} onKeyPress={this.props.ifEnterPress}/>
+            <div id="searchBarContainer">
+                <input id="searchTextField" type="text" onChange={this.props.updateSearchQuery} onKeyPress={this.props.ifEnterPress}/>
                 <button>Search</button>
             </div>
         )
