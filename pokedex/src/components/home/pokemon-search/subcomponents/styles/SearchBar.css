@@ -1,7 +1,18 @@
 #searchBarContainer {
-    border: dashed 1px white;
+  margin-top: 207.5px;
+}
+
+#inputFieldContainer {
+  display: flex;
 }
 
 #searchTextField {
-    border-radius: 5px;
+  height: 30px;
+  padding: 5px 10px;
+  border: none;
+}
+
+#searchTextField {
+  border-radius: 25px;
+  flex-grow: 100;
 }
