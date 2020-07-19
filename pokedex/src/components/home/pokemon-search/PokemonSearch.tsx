@@ -34,6 +34,10 @@ class PokemonSearch extends React.Component<PokemonSearchProps> {
   render() {
     return (
       <div id="pokemonSearchContainer">
+        <h1 id="welcomeHeader">
+          Welcome, <br />
+          Pokemon Trainer!
+        </h1>
         <SearchBar
           updateSearchQuery={this.updateSearchQuery}
           searchQuery={this.state.searchQuery}

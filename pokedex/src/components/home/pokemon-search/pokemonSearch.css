@@ -5,3 +5,8 @@
   color: white;
   background-color: #ff0000;
 }
+
+#welcomeHeader {
+  margin-top: 115px;
+  font-family: sans-serif;
+}
