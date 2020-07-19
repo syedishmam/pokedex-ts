@@ -18,7 +18,6 @@ class PokemonSearch extends React.Component<PokemonSearchProps> {
 
   updateSearchQuery = (e: React.FormEvent<HTMLInputElement>): void => {
     this.setState({ searchQuery: e.currentTarget.value });
-    console.log(e.currentTarget.value);
   };
 
   ifEnterPress = async (e: React.KeyboardEvent) => {
