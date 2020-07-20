@@ -5,7 +5,7 @@ import './styles/SearchBar.css';
 interface SearchBarProps {
   updateSearchQuery: (event: any) => void;
   searchQuery: string;
-  ifEnterPress: (e: React.KeyboardEvent) => void;
+  fetchOnEnter: (e: React.KeyboardEvent) => void;
 }
 
 class SearchBar extends React.Component<SearchBarProps> {
@@ -16,7 +16,7 @@ class SearchBar extends React.Component<SearchBarProps> {
           id="searchTextField"
           type="text"
           onChange={this.props.updateSearchQuery}
-          onKeyPress={this.props.ifEnterPress}
+          onKeyPress={this.props.fetchOnEnter}
           placeholder="Search any Pokemon, type, or ability here!"
         />
       </div>
