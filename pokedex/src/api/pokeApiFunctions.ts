@@ -1,7 +1,7 @@
 import pokeApi from './pokeApi';
 
 import {abilityCodes} from '../api/abilityCodes';
-import {storePokemonDataSet, storeAbilityData} from '../redux/actions/storePokemonDataSet';
+import {storePokemonDataSet, storeAbilityData} from '../redux/actions/storeApiData';
 
 export const fetchPokemon = async (
   searchQuery: string,
@@ -19,7 +19,7 @@ export const fetchAbility = async (
 ): Promise<Object> => {
   const abilityData = await pokeApi.get(`type/${searchQuery}`)
   storeAbilityData(abilityData);
-  console.log(abilityData);
+  console.log(abilityData.data);
   return abilityData.data;
 };
 
