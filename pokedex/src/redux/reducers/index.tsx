@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import storePokemonDataSetReducer from './storePokemonDataSetReducer';
+import apiDataReducer from './storeApiDataReducer';
 
 export default combineReducers({
-  apiData: storePokemonDataSetReducer,
+  apiData: apiDataReducer
 });
